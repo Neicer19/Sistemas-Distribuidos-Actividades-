@@ -1,0 +1,184 @@
+% Plantilla latex para publicación de artículo científico en la revista "La Mecatrónica en México"
+%
+% @author {Juan Manuel Aviña Muñoz}
+% @email {juan.avina.m@gmail.com}
+% @year 2023
+% @version 1.0
+% @license CC BY 4.0
+%
+% Se agradecen sus comentarios, contribuciones, reporte de bugs y la difusión de esta plantilla.
+
+
+
+
+% Tipo de documento ytamaño de letra
+\documentclass[10pt]{article}
+
+% Ajuste de lenguaje
+\usepackage[spanish, english]{babel}
+
+% Tamaño de página y margenes
+\usepackage[letterpaper, top=2.5cm,bottom=3.5cm, left=3cm, right=2.5cm, marginparwidth=1.75cm]{geometry}
+
+% Permite manejo de ecuaciones y símbolos matemáticos
+\usepackage{amsmath, amssymb, amsthm, amsfonts}
+
+% Paquete para agregar imágenes
+\usepackage{graphicx}
+
+% Paquete para hipervinculos
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=black,
+    urlcolor=black,
+    citecolor=black}
+
+% Package for specifying fonts
+\usepackage{fontspec}
+
+% Permite el manejo de caracteres especiales en el español
+\usepackage[utf8]{inputenc} 
+\usepackage[T1]{fontenc}
+
+% Subrayado de textos
+\usepackage[normalem]{ulem}
+
+% Personalizar los encabezados y pies de página
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+
+% Ruta para imagenes
+\graphicspath{{image/}}
+
+\usepackage[style=apa]{biblatex}
+\addbibresource{ref.bib}
+
+% Fuente principal del texto: Arial
+\setmainfont{Arial}
+
+% Ajusta la sangría
+\setlength{\parindent}{1cm}
+
+% Ajusta el espacio entre renglones
+\setlength{\parskip}{0.5cm}
+
+% Headers config
+% Cambiar Volumen, Numero y páginas
+\lhead{
+    Arquitetura de Sistemas Distribuidos SOA, Octubre 2024, Vol. 1, No. 1, páginas 01 – 06\\Disponible en línea en \href{https://www.redalyc.org/journal/849/84969623008/84969623008.pdf}{https://www.redalyc.org/journal/849/84969623008/84969623008.pdf}\\ISSN: : 0122-1701, Universidad Laica Eloy Alfaro de Manabí Extensión El Carmen}
+\rhead{
+    \includegraphics[width=1.2cm]{logo}}
+\headsep=60pt
+
+
+% Información del artículo
+\title{\Huge Arquitetura de Sistemas Distribuidos SOA}
+\author{\large Jeniffer Zambrano \\ Neicer Zambrano}
+\date{\normalsize Universidad Laica Eloy Alfaro de Manabí Extensión El Carmen.\\
+\textit{\large jenifferzambrano835@gmail.com \\ danielzam581@gmail.com}}
+
+
+
+\begin{document}
+\maketitle
+
+
+\selectlanguage{spanish}
+\begin{abstract}
+    \textit{\normalsize En la actualidad, las empresas enfrentan entornos cada vez más exigentes que requieren adaptaciones rápidas y flexibles. Las arquitecturas tradicionales, diseñadas para funciones específicas, a menudo resultan inadecuadas, ya que su integración puede ser complicada y limita la capacidad de respuesta ante nuevas oportunidades o amenazas. Para abordar estas necesidades, ha emergido la Arquitectura Orientada a Servicios (SOA), un enfoque que permite una mejor adaptación. En una SOA, las funcionalidades de las aplicaciones se ofrecen a través de componentes llamados servicios, que cuentan con interfaces bien definidas. Esto proporciona a las organizaciones la flexibilidad necesaria para responder a un entorno dinámico y aprovechar nuevas oportunidades de negocio.}
+    
+    \vspace{1 cm}
+
+\end{abstract}
+
+
+\selectlanguage{english}
+\begin{abstract}
+    \textit{\normalsize Today, companies face increasingly demanding environments that require quick and flexible adaptations. Traditional architectures, designed for specific functions, are often inadequate, as their integration can be complicated and limits the ability to respond to new opportunities or threats. To address these needs, Service Oriented Architecture (SOA) has emerged, an approach that allows for better adaptation. In a SOA, application functionalities are offered through components called services, which have well-defined interfaces. This provides organizations with the flexibility to respond to a dynamic environment and take advantage of new business opportunities.}
+    
+    \vspace{1 cm}
+
+\end{abstract}
+
+
+
+\selectlanguage{spanish}
+\begin{center}
+    \section{Introducción}
+\end{center}
+
+    Los sistemas de información han evolucionado considerablemente en los últimos años, pasando de monolitos primitivos a complejas arquitecturas cliente/servidor y, finalmente, a enfoques basados en servicios.\vspace{0.5 cm} \\ \hspace*{2.5em} En estas arquitecturas, las funcionalidades se implementan como componentes reutilizables, accesibles a través de interfaces estándar, lo que permite combinaciones para crear soluciones más complejas. En el entorno empresarial actual, las organizaciones requieren una gran flexibilidad para adaptarse rápidamente a demandas cambiantes.\vspace{0.5 cm} 
+    \\ \hspace*{2.5em} Sin embargo, las arquitecturas tradicionales a menudo se enfrentan a dificultades de integración, ya que suelen estar diseñadas como "silos verticales" con propósitos limitados. Este documento se enfoca en describir la arquitectura tecnológica de integración basada en servicios (SOA).\vspace{1.5 cm} 
+    
+    \begin{center}
+    \section{Materiales y Métodos}
+    \end{center}
+    \hspace*{2.5em} Para  el  desarrollo  de  este  artículo,  se  realizó  la investigación  en  diversas  fuentes,  artículos,  diferentes  Bases  de  Datos  de  la  Facultad  de  Ingeniería  proporcionadas  por  la  Biblioteca  de  la  Universidad  Tecnológica  y  plataformas  de  utilidad  (LTUP).  Los  criterios  que  se  manejaron  para  las  fuentes  de  información  referentes  a  la  arquitectura  SOA,  tomaron  en  un  rango  no  mayor  a  5  años  de  antigüedad.
+    
+    
+
+     \subsection{La  Arquitectura  Orientada  a  Servicios  (SOA)}
+     \hspace*{2.5em} La Arquitectura Orientada a Servicios (SOA) es un modelo que interconecta diferentes componentes de una aplicación a través de servicios, permitiendo la interacción entre ellos mediante interfaces claramente definidas. Lo más relevante es que estas interfaces son neutrales, lo que significa que no dependen de la plataforma, el sistema operativo ni el lenguaje de programación en el que se implementan. Esta neutralidad facilita la integración de tecnologías diversas de manera uniforme, creando un entorno de interacción fluido entre los servicios.
+
+     Aunque SOA no es un concepto totalmente nuevo, ha evolucionado significativamente gracias a la adopción del lenguaje XML, un estándar que permite describir datos de forma universal. A través de las especificaciones XML, conocidas como Web Services, SOA ha logrado una gran aceptación, especialmente en el ámbito empresarial, y es gestionada por el W3C, el comité encargado de los estándares web.
+     \newpage
+
+    En SOA, los servicios no suelen interactuar directamente, sino que se apoyan en un **Enterprise Service Bus** (ESB), que funciona como una columna vertebral que facilita el intercambio de mensajes entre los servicios. Este modelo ofrece una serie de capacidades fundamentales, como el modelado de procesos de negocio, la integración de componentes técnicos, el despliegue y la supervisión en tiempo real de los procesos para corregir posibles desviaciones.
+    
+    Uno de los grandes atractivos de SOA es su capacidad para reducir la dependencia de factores externos y su alta reutilización de componentes, lo que la hace eficiente y flexible. Gracias a su modularidad, esta arquitectura permite a las empresas desarrollar y adaptar sus sistemas de forma más económica y ágil en comparación con otras arquitecturas tradicionales, como CORBA.
+    
+    Los principios clave de SOA incluyen el \textbf{{Contrato Formal}}, que establece cómo se debe consumir el servicio; el \textbf{{Bajo Acoplamientol}}, que permite a los servicios adaptarse rápidamente a cambios sin afectar gravemente al sistema; la \textbf{{Descubrimientol}} de servicios para resolver tareas más complejas; el \textbf{{Contrato Formal}}, que asegura que los servicios siempre ejecuten la tarea asignada; y la \textbf{{Autonomía}} y \textbf{{Reutilizaciónl}}, que facilitan la independencia y flexibilidad.
+    
+    En términos prácticos, servicios como Amazon, eBay y AliExpress son ejemplos de aplicaciones que utilizan SOA para gestionar sus procesos de comercio electrónico. Los usuarios interactúan con estas plataformas sin percibir las complejas capas de servicios que están involucradas, como la recolección de datos, pagos electrónicos y coordinación de entregas.
+    
+    Finalmente, SOA ha demostrado ser un modelo versátil y aplicable en diversos sectores empresariales, permitiendo a las organizaciones mejorar su flexibilidad, agilidad y capacidad de crecimiento al integrar tecnologías de la información. Su capacidad para adaptarse a diversas plataformas y su enfoque en la reutilización lo convierten en una herramienta poderosa para la gestión y el avance tecnológico de las empresas.
+
+\vspace{0.5cm}
+\begin{center}
+    \section{Resultados}
+\end{center}    
+    \hspace*{2.5em} Cuando una empresa ha crecido de manera tradicional, ya sea de forma orgánica o mediante la adquisición de otras compañías, puede enfrentarse a entornos complejos y difíciles de gestionar. En estos casos, si no se cuenta con una arquitectura orientada a servicios (SOA), cada vez que se quiera ofrecer un nuevo servicio, es necesario desarrollar una aplicación desde cero, lo cual implica altos costos, no solo económicos, sino también estratégicos debido al tiempo invertido en cada desarrollo.
+
+    En contraste, si una empresa tiene una arquitectura orientada a servicios, los desarrollos se planifican pensando en la integración con otros sistemas o aplicaciones. Esto significa que se pueden reutilizar módulos ya existentes para lanzar nuevos servicios, aprovechando elementos comunes, lo que reduce significativamente el tiempo y esfuerzo necesarios. Por ejemplo, si la empresa adquiere una nueva entidad, en lugar de desarrollar una aplicación completamente nueva, solo se tendría que adaptar la conexión a los datos ya existentes, lo que simplifica mucho el proceso de integración.
+    \newpage
+    
+    Estos cambios en la estructura de la empresa pueden transformar la manera en que se percibe la innovación y la eficiencia. Es común encontrar departamentos que, lejos de ser motores de cambio, actúan como frenos para el desarrollo. En esos casos, es necesario invertir recursos en transformar estos departamentos para que, en lugar de obstaculizar, impulsen la innovación y el desarrollo, permitiendo a la empresa ofrecer nuevos servicios con mayor rapidez y eficiencia.
+    
+    En resumen, una arquitectura orientada a servicios no solo facilita la integración de nuevas tecnologías o entidades adquiridas, sino que también permite que la empresa sea más ágil, eficiente y preparada para el futuro.
+
+    \begin{center}
+    \section{Implementación SOA}
+    \end{center} 
+
+        El proyecto Anamnesis, desarrollado en 2016, abordó diversas problemáticas del sector salud en Colombia, tales como la falta de cobertura y las dificultades económicas de las entidades prestadoras de servicios de salud. La solución planteada fue la creación de un aplicativo disponible en plataformas web, Android e iOS, que permitiera mejorar la gestión de datos en salud.
+
+        Este servicio se compone de otros subservicios, de manera que pueden abordar tareas más complejas. En este contexto, la arquitectura orientada a servicios (SOA) fue clave, ya que permite centralizar y gestionar de manera distribuida los registros médicos. Esto facilita el acceso a las historias clínicas, garantizando al mismo tiempo la seguridad de la información almacenada.
+        
+        La solución técnica se apoyó en dos aplicaciones: una web para equipos de cómputo y otra móvil, ambas desarrolladas bajo un modelo de tres capas. Para asegurar la calidad del proyecto, se diseñó un proceso de pruebas de integración. Este incluyó el uso de herramientas como SoapUI para simular servicios y comprobar que las respuestas obtenidas fueran las esperadas.
+        
+        El proceso de pruebas se dividió en varias fases. La primera fase implicó la definición del entorno y la creación de casos de prueba basados en "caja negra", es decir, sin conocer el funcionamiento interno del sistema. En la segunda fase, se probaron los servicios simulados, mientras que la tercera fase se centró en la ejecución de las pruebas y la obtención de resultados.
+        
+        Finalmente, el proyecto concluyó con un análisis del comportamiento del sistema en diferentes entornos de prueba. Este análisis permitió detectar fallos y mejorar el desempeño del sistema, resaltando la importancia de un trabajo en equipo ordenado y bien informado durante todo el proceso de desarrollo y prueba.
+
+      \newpage
+\begin{center}
+    \section{Conclusiones}
+\end{center}
+        \hspace*{2.5em} La arquitectura orientada a servicios (SOA) soluciona los problemas de integración al reemplazar la fuerte dependencia entre aplicaciones con un conjunto de servicios independientes, conectados a través de un Bus de Servicios Empresariales (ESB). Esta estructura permite que los servicios funcionen de manera autónoma, lo que significa que los cambios internos en un servicio no afectan al resto del sistema, manteniendo su operación sin interrupciones.
+
+        Durante este proyecto, se revisaron diversas fuentes, destacándose un artículo que proponía un método de pruebas para la arquitectura SOA. Estas pruebas abarcan desde la comprensión del entorno de desarrollo hasta la ejecución de las mismas, validando la robustez de esta arquitectura.
+        
+        El ESB facilita una conexión flexible entre los servicios, que funcionan como "cajas negras". Incluso si las reglas internas de un servicio cambian, el resto del sistema sigue operando de manera transparente. Esta característica resalta la capacidad de SOA para adaptarse a cambios sin interrumpir el flujo general.
+        
+        Uno de los puntos más interesantes de la arquitectura SOA es su capacidad para manejar una gran cantidad de entradas y salidas de datos, las cuales pueden ser procesadas mediante diversas herramientas. Esto es especialmente útil en el contexto empresarial, donde la integración y el análisis de datos son claves para el crecimiento.
+        
+        Además, las aplicaciones web basadas en SOA ofrecen una ventaja significativa al facilitar la interacción entre plataformas internas y externas sin generar dependencias durante su diseño y configuración. Esto asegura agilidad, eficiencia y seguridad en su implementación, lo que resulta esencial en un entorno empresarial competitivo.
+
+\vspace{0.5cm}
+% Para agregar o eliminar referencias, revisa el archivo "ref.bib", ahí encontrarás algunos ejemplos.
+\nocite{*}
+\printbibliography
+
+    
+\end{document}
